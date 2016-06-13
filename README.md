@@ -1,5 +1,11 @@
 # fc-sms-service
 
+# Attention
+
+* Not to use <https://github.com/zenazn/goji>. Checkout the later version <https://goji.io/>. Or look for something else widely used by the community.
+* Use <https://github.com/Sirupsen/logrus> for logging for structure logging. The motivation is to easily take advantage of logrus hooks to centralize logs data into one searchable place. With the `correlation_id` on every payload, it should be possible to trace the whole data flow through all micro services.
+* Do not share models or business logic code across services.
+
 ## description
 Golang service to send sms messages.
 
